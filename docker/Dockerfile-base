@@ -32,7 +32,8 @@ RUN apt-get update \
                unzip \
                wget \
                xvfb \
-               zip
+               zip \
+               vim
 
 # Install RISCV toolchain apt packages
 RUN apt-get install -y \
