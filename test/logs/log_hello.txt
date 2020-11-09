@@ -1,0 +1,10 @@
++ set -euo pipefail
+++ riscv32-unknown-elf-objdump -x hello
+++ grep '0 _start'
+++ cut -d ' ' -f1
++ pc_start=00010074
++ echo 'PC starts at: 00010074'
+PC starts at: 00010074
++ spike --isa=RV32IMAC -m0x20000000:0x2000,0x40000000:0x1000,0x80000000:0x20000 -l hello
+ERROR: invalid load from debug module: 8 bytes at 0x0000000000012dc0
+terminate called after throwing an instance of 'trap_load_access_fault'
