@@ -1,0 +1,1 @@
+riscv32-unknown-elf-objdump -d $1 > $1.S
